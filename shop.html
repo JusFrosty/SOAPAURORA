@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All - Aurora Journals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SITE NAVIGATION HEADER -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-image-container">
+                <img src="images/Logo.PNG" alt="Aurora Journals Logo" class="nav-logo-img">
+            </a>
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link active">Shop All</a>
+            </nav>
+            <button class="cart-btn" id="nav-cart-trigger">
+                Bag <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN SHOPPING COMPONENT CONTAINER -->
+    <main class="content-container" style="margin-top: 120px;">
+        <div class="shop-utility-header">
+            <h1 class="storefront-title">Our Collection</h1>
+            <div class="search-input-wrapper">
+                <input type="text" id="shop-search-field" placeholder="Search our journals...">
+            </div>
+        </div>
+
+        <!-- TARGET HOOK FOR THE JAVASCRIPT DISPLAY -->
+        <div id="catalog-grid-surface" class="product-grid"></div>
+    </main>
+
+    <!-- TRANSACTIONAL OVERLAY MODALS -->
+    <div class="cart-overlay" id="cart-global-overlay"></div>
+    <div class="cart-drawer" id="cart-global-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Shopping Bag</h3>
+            <button class="close-drawer-btn" id="close-cart-drawer">&times;</button>
+        </div>
+        <div class="cart-items-container" id="drawer-items-surface"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Subtotal:</span>
+                <span id="drawer-computed-total">$0.00</span>
+            </div>
+            <button class="btn-primary checkout-btn" onclick="alert('Checkout integration coming soon!')">Secure Checkout</button>
+        </div>
+    </div>
+
+    <!-- CORE EXECUTION ENGINES -->
+    <script src="script.js"></script>
+</body>
+</html>
