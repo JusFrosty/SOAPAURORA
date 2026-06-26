@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOAP Bible Journal - Aurora Journals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SITE NAVIGATION HEADER -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-image-container">
+                <img src="images/RealTalk.PNG" alt="Aurora Journals Logo" class="nav-logo-img">
+            </a>
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="product.html" class="nav-link active">Shop Journal</a>
+            </nav>
+            <button class="cart-btn" id="nav-cart-trigger" style="display: none;">
+                Bag <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN PRODUCT DISPLAY INTERFACE -->
+    <main class="content-container" style="margin-top: 120px;">
+        <!-- The JavaScript engine targets this exact ID to load your 5-image slider and description -->
+        <div id="product-detail-surface">
+            <p style="text-align: center; color: var(--muted-gray); font-weight: 600;">Loading your premium journal experience...</p>
+        </div>
+    </main>
+
+    <!-- GLOBAL TRANSACTIONAL OVERLAYS (STAY HIDDEN UNLESS ACTIVE) -->
+    <div class="cart-overlay" id="cart-global-overlay"></div>
+    <div class="cart-drawer" id="cart-global-drawer">
+        <div class="cart-drawer-header">
+            <h2>Your Bag</h2>
+            <button class="close-drawer-btn" id="close-cart-drawer">&times;</button>
+        </div>
+        <div class="cart-items-container" id="drawer-items-surface"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="drawer-computed-total">$0.00</span>
+            </div>
+            <button class="btn-primary checkout-btn" id="drawer-checkout-action">Secure Checkout</button>
+        </div>
+    </div>
+
+    <!-- CORE SITE SCRIPTS ENGINE (TIMED IN ORDER) -->
+    <!-- 1. Custom layout architecture and image array parser runs first -->
+    <script src="script.js"></script>
+
+    <!-- 2. Payhip payment interface layer injects last to connect buttons securely -->
+    <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
+</body>
+</html>
