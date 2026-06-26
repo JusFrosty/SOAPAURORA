@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Products | Faithful Pages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Faithful Pages.</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="index.html#about-brand">About</a></li>
+            <li><a href="#footer-anchor">Contact</a></li>
+        </ul>
+        <div class="cart-icon-container" id="cart-trigger-node">
+            <svg viewBox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12z"/></svg>
+            <div class="cart-count">0</div>
+        </div>
+    </nav>
+
+    <section class="section-container" style="background-color: var(--pure-white);">
+        <h2 class="section-title">OUR BESTSELLERS</h2>
+        <p class="section-subtitle">Discover digital spaces designed perfectly for consistent devotional life enrichment.</p>
+        
+        <div class="search-bar">
+            <input type="text" id="shop-search-field" placeholder="Search our premium faith products range...">
+        </div>
+
+        <div class="product-grid" id="shop-injection-target"></div>
+    </section>
+
+    <div class="cart-overlay" id="cart-overlay-node"></div>
+    <div class="cart-drawer" id="cart-drawer-node">
+        <div class="cart-header">
+            <h2>Your Shopping Bag</h2>
+            <button class="close-cart" id="cart-close-node">&times;</button>
+        </div>
+        <div class="cart-items-body" id="cart-items-wrapper"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-running-total">$0.00</span>
+            </div>
+            <button class="btn-primary" style="width:100%; text-align:center;" onclick="alert('Proceeding safely to secure digital delivery pipeline checkout!')">Secure Checkout</button>
+        </div>
+    </div>
+
+    <footer id="footer-anchor">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Faithful Pages.</h2>
+                <p>Designing modern, premium aesthetic digital spaces dedicated to purposeful Christian lifestyle integration, personal spiritual restoration, and devotional growth.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home Hub</a></li>
+                    <li><a href="shop.html">Shop Catalog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect With Us</h4>
+                <ul>
+                    <li><a href="#instagram">Pinterest Hub</a></li>
+                    <li><a href="#pinterest">Instagram Log</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Faithful Pages. All digital distribution rights reserved securely.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
