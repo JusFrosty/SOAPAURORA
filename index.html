@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Journals - Elevate Your Devotional Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- GLOBAL SITE HEADER & HEADER LOGO NAVIGATION -->
+    <header class="site-header">
+        <div class="nav-container">
+            <!-- Brand Logo Integration snapped flush to the corner -->
+            <a href="index.html" class="logo-image-container">
+                <img src="images/Logo.PNG" alt="Aurora Journals Logo" class="nav-logo-img">
+            </a>
+
+            <!-- Central Nav Deck -->
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="shop.html" class="nav-link">Shop All</a>
+            </nav>
+
+            <!-- Interactive Transactional Actions -->
+            <button class="cart-btn" id="nav-cart-trigger">
+                Bag <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- IMMERSIVE HERO SPLASH INTERFACE -->
+    <section class="hero-surface">
+        <div class="hero-content">
+            <h1>Elevate Your Daily Devotional Workspace</h1>
+            <p>High-energy, beautifully structured pink productivity toolkits designed to completely transform your quiet time and clear spiritual milestones.</p>
+            <a href="shop.html" class="btn-primary">Shop The Collection</a>
+        </div>
+    </section>
+
+    <!-- DYNAMIC CATALOG TARGET DECK (OLD CHIPS DELETED) -->
+    <section class="content-container">
+        <h2 class="section-title">The Current Bestsellers</h2>
+        <div id="catalog-grid-surface" class="product-grid">
+            <!-- Leave this completely empty! JavaScript handles generating your single $8.99 SOAP journal here -->
+        </div>
+    </section>
+
+    <!-- TRANSACTIONAL OVERLAY MODULES (GLOBAL SLIDE OUT DRAWER COMPONENT) -->
+    <div class="cart-overlay" id="cart-global-overlay"></div>
+    <div class="cart-drawer" id="cart-global-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Shopping Bag</h3>
+            <button class="close-drawer-btn" id="close-cart-drawer">&times;</button>
+        </div>
+        
+        <!-- Target container for cart data rows -->
+        <div class="cart-items-container" id="drawer-items-surface">
+            <!-- Programmatically populated by engine script -->
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Subtotal:</span>
+                <span id="drawer-computed-total">$0.00</span>
+            </div>
+            <button class="btn-primary checkout-btn" onclick="alert('Checkout integration coming soon!')">Secure Checkout</button>
+        </div>
+    </div>
+
+    <!-- MAIN CORE PROGRAMMATIC LOGIC INTERACTION ENGINES -->
+    <script src="script.js"></script>
+</body>
+</html>
