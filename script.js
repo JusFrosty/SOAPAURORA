@@ -141,16 +141,30 @@ function navigateToProduct(productId) {
 }
 
 /* ==========================================================================
-   PAYHIP EXTERNAL INTEGRATION LAYER
+   PAYHIP EXTERNAL INTEGRATION LAYER (FIXED TIMING BUG)
    ========================================================================== */
 function executeAddToCart(productId) {
-    // Triggers your official storefront URL inside Payhip's overlay modal script
-    if (window.Payhip) {
+    const payhipStoreUrl = "https://payhip.com/4ur0raJournals";
+
+    // 1. If Payhip is fully loaded, launch the popup instantly
+    if (window.Payhip && typeof window.Payhip.openCheckout === "function") {
         Payhip.openCheckout({
-            url: "https://payhip.com/4ur0raJournals"
+            url: payhipStoreUrl
         });
-    } else {
-        // Safe fallback: If the network drops or script slows down, opens store cleanly in a new tab
-        window.open("https://payhip.com/4ur0raJournals", "_blank");
+    } 
+    // 2. If it's still loading in the background, wait 300 milliseconds and try again
+    else {
+        console.log("Payhip script is still loading... holding checkout for a split second.");
+        
+        setTimeout(() => {
+            if (window.Payhip && typeof window.Payhip.openCheckout === "function") {
+                Payhip.openCheckout({
+                    url: payhipStoreUrl
+                });
+            } else {
+                // 3. Absolute worst-case scenario (e.g., bad internet connection blocks Payhip), open in a clean tab so the sale isn't lost
+                window.open(payhipStoreUrl, "_blank");
+            }
+        }, 300);
     }
 }
